@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="a">
+  <!--ツールチップ出現用のアニメーションを指定するCSS。※導入方法は後程解説。読み込まなくてもフェードインで出現します。-->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/animations/shift-toward-subtle.css">
+  <!--ツールチップの色を指定するCSS。。※導入方法は後程解説。読み込まなくても黒色で出現します。-->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/themes/light-border.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.15/swiper-bundle.min.css"
+    integrity="sha512-uA1+kHA/0O68FTSM4jeTzJNnRvNWxdCCSnE3gv8LaySXYxQT3nc5uPX9buMPtI1gxUBcxm0+5Lcw59jjl0nMDQ=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <title></title>
+  <script src="new-item.json"></script>
+  <script src="ranking.json"></script>
+</head>
+
+<body>
+  <!-- overflow-hidden用のやつ開始 -->
+  <div class="wrap">
+
+    <!-- トップに戻るボタン -->
+    <div id="page-top"><a href="#"><i class="fas fa-chevron-up"></i></a></div>	
+    <!-- トップに戻るボタン -->
+
+    <header>
+      <div class="top-news-wrapper">
+        <a href=""><p class="top-news"><span class="top-news-red">お知らせ</span>お知らせお知らせお知らせお知らせお知らせお知らせお知らせお知らせ</p></a>
+        <a href=""><p class="top-news top-news-sp"><span class="top-news-red">お知らせ</span>本日のお知らせ本日のお知らせ本日のお知らせ</p></a>
+      </div>
+      <div class="top-bg-pink"></div>
+      <div class="top-gray">
+        <p>全国一律送料590円(沖縄・離島は1,300円)/お買い上げ金額3,980円(沖縄・離島は9,800円)以上で送料無料 <a href="" class="top-shop-info"><i
+              class="fas fa-home"></i>店舗情報</a> | <a href=""><i class="fas fa-info-circle"></i>お買い物ガイド</a> | <a
+            href=""><i class="far fa-comments"></i>お問い合わせ</a> | <a href=""><i
+              class="fas fa-envelope-square"></i>メルマガ登録</a> |</p>
+      </div>
+
+      <div class="logo-search-wrapper">
+        <!-- ロゴ開始 -->
+        <div class="logo">ロゴ</div>
+        <!-- ロゴ終了 -->
+        <!-- pc版の検索開始 -->
+        <div class="search">
+          <div class="search-wrapper">
+            <input type="text" placeholder="キーワードを入力してください" name="search" id="search">
+            <label for="search"><i class="fas fa-search"></i></label>
+          </div>
+          <div class="search-cart">
+            <a href=""><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <!-- pc版の検索終了 -->
+
+      </div>
+      <!-- sp版のlogo-search-menu開始 -->
+      <div class="sp-logo-search-wrapper">
+        <!-- sp版の検索開始 -->
+        <div class="search-sp">
+          <i class="fas fa-search"></i>
+        </div>
+        <!-- sp版の検索終了 -->
+        <!-- spのロゴ開始 -->
+        <div class="sp-logo">ロゴ</div>
+        <!-- spのロゴ終了 -->
+        <!-- sp版のmenu開始 -->
+        <div class="menu-sp">
+          <i class="fas fa-bars"></i><br>
+          <p>Menu</p>
+        </div>
+        <!-- sp版のmenu終了 -->
+      </div>
+
+      <div class="search-sp-hide">
+        <form action="">
+          <input type="text" placeholder="アイテム名や商品番号を検索する" class="search-text">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+        <p class="search-link"><a href="#">詳細検索はこちら ></a></p>
+        <p class="search-delete"><i class="fas fa-times"></i></p>
+      </div>
+      <!-- sp版のlogo-search-menu終了 -->
+      <!-- sp版のメニューの隠れている部分開始 -->
+      <div class="menu-hide">
+        <ul class="menu-hide-wrapper">
+          <li class="menu-hide-cross"><i class="fas fa-times"></i></li>
+          <ul>
+            <a href="">
+              <li>要素が入ります</li>
+              <p><i class="fas fa-chevron-right"></i></p>
+            </a>
+          </ul>
+          <ul>
+            <a href="">
+              <li>要素が入ります</li>
+              <p><i class="fas fa-chevron-right"></i></p>
+            </a>
+            <a href="">
+              <li>要素が入ります</li>
+              <p><i class="fas fa-chevron-right"></i></p>
+            </a>
+            <a href="">
+              <li>要素が入ります</li>
+              <p><i class="fas fa-chevron-right"></i></p>
+            </a>
+          </ul>
+          <ul>
+            <a href="">
+              <li>要素が入ります</li>
+              <p><i class="fas fa-chevron-right"></i></p>
+            </a>
+            <a href="">
+              <li>要素が入ります</li>
+              <p><i class="fas fa-chevron-right"></i></p>
+            </a>
+          </ul>
+          <li class="menu-hide-cross"><i class="fas fa-times"></i></li>
+        </ul>
+      </div>
+      <!-- sp版のメニューの隠れている部分終了 -->
+
+      <!-- トップナビゲーション開始 -->
+      <div class="top-nav">
+        <ul class="top-nav-pc">
+          <li class="cap" data-tippy-content="中に入れたい言葉が入ります"><a href="#">カテゴリー</a></li>
+          <li class="cap" data-tippy-content="中に入れたい言葉が入ります"><a href="#">新着商品</a></li>
+          <li class="cap" data-tippy-content="中に入れたい言葉が入ります"><a href="#">人気商品</a></li>
+          <li class="cap" data-tippy-content="中に入れたい言葉が入ります"><a href="#">おすすめ特集</a></li>
+          <li class="cap" data-tippy-content="中に入れたい言葉が入ります"><a href="#">お知らせ</a></li>
+          <li class="cap" data-tippy-content="中に入れたい言葉が入ります"><a href="#">FAQs</a></li>
+          <li class="cap gain" data-tippy-content="中に入れたい言葉が入ります"><a href="#">お買い得情報</a></li>
+        </ul>
+        <ul class="top-nav-sp">
+          <li><a href=""><i class="fas fa-smile fa-2x" style="padding-left: 5px;"></i><br>初めての方</a></li>
+          <li><a href=""><i class="fas fa-store fa-2x"></i><br>店舗情報</a></li>
+          <li><a href=""><i class="fas fa-book-open fa-2x" style="padding-left: 11px;"></i><br>お買い物ガイド</a></li>
+          <li><a href=""><i class="fas fa-mobile-alt fa-2x" style="padding-left: 11px;"></i><br>お問い合わせ</a></li>
+          <li><a href=""><i class="fas fa-check fa-2x" style="padding-left: 11px;"></i><br>メルマガ登録</a></li>
+        </ul>
+      </div>
+      <!-- トップナビゲーション終了 -->
+
+      <!-- スライダー開始 -->
+      <div class="slider-top-wrapper">
+        <div class="slider-top mypattern">
+          <div><a href=""><img src="./images/slide-01.jpg" alt=""></a></div>
+          <div><a href=""><img src="./images/slide-02.jpg" alt=""></a></div>
+          <div><a href=""><img src="./images/slide-03.jpg" alt=""></a></div>
+        </div>
+      </div>
+      <!-- スライダー終了 -->
+    </header>
+
+
+
+    <section class="banner-side-content-wrapper">
+      <div class="banner-wrapper">
+      </div>
+      <div class="three-banners-wrapper">
+        <div class="three-banners">
+          <div class="three-banners-item"><a href=""><img src="./images/3banner-01.jpg" alt=""></a></div>
+          <div class="three-banners-item"><a href=""><img src="./images/3banner-02.jpg" alt=""></a></div>
+          <div class="three-banners-item item-3"><a href=""><img src="./images/3banner-03.jpg" alt=""></a></div>
+        </div>
+
+        <!-- side-content-wrapper開始 -->
+        <div class="side-content-wrapper">
+
+          <!-- content-wrapper開始 -->
+          <div class="content-wrapper">
+
+            <!-- new-item開始 -->
+            <div class="content new-item">
+              <h2>New Item<br><span class="japanese">新着商品</span></h2>
+              <div class="new-item-wrapper">
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                      <p class="new-item-item-heart"><i class="far fa-heart"></i></p>
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                      <p class="new-item-item-heart"><i class="far fa-heart"></i></p>
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                      <p class="new-item-item-heart"><i class="far fa-heart"></i></p>
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                      <p class="new-item-item-heart"><i class="far fa-heart"></i></p>
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                      <p class="new-item-item-heart"><i class="far fa-heart"></i></p>
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                      <p class="new-item-item-heart"><i class="far fa-heart"></i></p>
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                    
+                      <p class="sale">SALE</p>
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                    
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                   
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                     
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                    
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+                    
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+                <div class="new-item-item">
+                  <a href="">
+                    <div class="new-item-item-img">
+                      <img src="./images/ranking01.jpg" alt="">
+              
+                    </div>
+                    <p class="new-item-item-title">Base Foundation</p>
+                    <p class="new-item-item-price">$10.00</p>
+                  </a>
+                </div>
+              </div>
+              
+              <!-- <div class="new-item-showing">
+                <p class="new-item-showing-left">Showing 1 -12 of 20 items</p>
+                <div class="new-item-showing-right">
+                  <a href="">
+                    <div class="new-item-showing-right-item"><i class="fas fa-chevron-left"></i></div>
+                  </a>
+                  <a href="">
+                    <div class="new-item-showing-right-item active">1</div>
+                  </a>
+                  <a href="">
+                    <div class="new-item-showing-right-item">2</div>
+                  </a>
+                  <a href="">
+                    <div class="new-item-showing-right-item"><i class="fas fa-chevron-right"></i></div>
+                  </a>
+                </div>
+              </div> -->
+            </div>
+            <!-- new-item終了 -->
+
+            <!-- ranking開始 -->
+            <div class="content ranking">
+              <h2>Ranking<br><span class="japanese">売れ筋ランキング</span></h2>
+
+              <ul class="tab">
+                <li class="active"><a href="#zakka">雑貨</a></li>
+                <li><a href="#fabric">ファブリック</a></li>
+                <li><a href="#furniture">家具</a></li>
+                <li><a href="#ilumination">照明</a></li>
+                <li><a href="#kids">キッズ</a></li>
+              </ul>
+
+              <div id="zakka" class="area is-active">
+                <ul class="slider">
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">￥1650</span></a></li>
+                  <!--/slider-->
+                </ul>
+                <!--/area -->
+              </div>
+              <div id="fabric" class="area">
+                <ul class="slider">
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <!--/slider-->
+                </ul>
+                <!--/area-->
+              </div>
+              <div id="furniture" class="area">
+                <ul class="slider">
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+
+                  <!--/slider-->
+                </ul>
+                <!--/area-->
+              </div>
+              <div id="ilumination" class="area">
+                <ul class="slider">
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+
+
+                  <!--/slider-->
+                </ul>
+                <!--/area-->
+              </div>
+              <div id="kids" class="area">
+                <ul class="slider">
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking02.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking03.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+                  <li><a href=""><img src="./images/ranking01.jpg" alt="">タイトルが入ります<br><span
+                        class="slider-price">¥1,650</span></a></li>
+
+                  <!--/slider-->
+                </ul>
+                <!--/area-->
+              </div>
+            </div>
+            <!-- ranking終了 -->
+
+            <!-- hot-contents開始 -->
+            <div class="hot-contents content">
+              <h2>Hot Contents<br><span class="japanese">特集</span></h2>
+              <ul class="hot-contents-tab">
+                <li class="active"><a href="#all">ALL</a></li>
+                <li><a href="#event">イベント</a></li>
+                <li><a href="#coupon">クーポン</a></li>
+                <li><a href="#special-feature">特集</a></li>
+              </ul>
+
+              <div id="all" class="hot-contents-area is-active">
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">イベント</span>
+                    </p>
+                  </a>
+                </div>
+                <!--/area-->
+              </div>
+
+
+              <div id="event" class="hot-contents-area">
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">イベント</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">イベント</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">イベント</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">イベント</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">イベント</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">イベント</span>
+                    </p>
+                  </a>
+                </div>
+                <!--/area-->
+              </div>
+
+
+              <div id="coupon" class="hot-contents-area">
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">クーポン</span>
+                    </p>
+                  </a>
+                </div>
+                <!--/area-->
+              </div>
+
+
+              <div id="special-feature" class="hot-contents-area">
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hot-contents-item">
+                  <a href="">
+                    <img src="./images/ranking01.jpg" alt="">
+                    <p class="hot-contents-item-bottom">
+                      あああああ<br>
+                      あああああああ<br>
+                      ああああああああああああ<br>
+                      あああああああ
+                      <span class="hot-contents-item-bottom-category">特集</span>
+                    </p>
+                  </a>
+                </div>
+                <!--/area-->
+              </div>
+
+            </div>
+            <!-- hot-contents終了 -->
+
+            <!-- category開始 -->
+            <div class="category content">
+              <h2>Category<br><span class="japanese">人気カテゴリー</span></h2>
+              <div class="category-wrapper">
+                <p class="category-item"><a href="">アート/ポスター</a></p>
+                <p class="category-item"><a href="">メンテナンスキット</a></p>
+                <p class="category-item"><a href="">ギフトカタログ</a></p>
+                <p class="category-item"><a href="">クッションカバー</a></p>
+                <p class="category-item"><a href="">ルームフレグランス</a></p>
+                <p class="category-item"><a href="">お掃除</a></p>
+              </div>
+            </div>
+            <!-- category終了 -->
+
+            <!-- news開始 -->
+            <div class="news-sp news content">
+              <h2>News <span class="news-title-japanese">ショップからのお知らせ</span></h2>
+              <div class="news-wrapper">
+                <div class="news-left">
+                  <p class="news-left-time">2021.02.19</p>
+                  <p class="news-left-time">2021.02.19</p>
+                  <p class="news-left-time">2021.02.12</p>
+                  <p class="news-left-time">2021.02.10</p>
+                  <p class="news-left-time">2021.02.05</p>
+                </div>
+                <div class="news-right">
+                  <p class="news-right-text"><span
+                      class="news-right-text-red">aaaa</span>ああああああああああああああああああああああああああああああああ</p>
+                </div>
+              </div>
+            </div>
+            <!-- news終了 -->
+          </div>
+          <!-- content-wrapper終了 -->
+
+
+          <!-- side-wrapper開始 -->
+          <div class="side-wrapper">
+            <!-- special-collection開始 -->
+            <div class="side special-collection">
+              <p class="side-title">SPECIAL COLLECTION</p>
+              <div class="special-collection-content-wrapper">
+                <div class="special-collection-input-wrapper">
+                  <input type="text">
+                  <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="special-collection-search-text-wrapper">
+                  <p class="special-collection-search-text"><a href="#">程よい伸縮性のレギンスパンツ</a></p>
+                  <p class="special-collection-search-text"><a href="#">春新作</a></p>
+                  <p class="special-collection-search-text"><a href="#">プチプラTシャツ</a></p>
+                  <p class="special-collection-search-text"><a href="#">綿100％ニット</a></p>
+                  <p class="special-collection-search-text"><a href="#">ブラウス</a></p>
+                  <p class="special-collection-search-text"><a href="#">春のライトアウター</a></p>
+                  <p class="special-collection-search-text"><a href="#">スウェット</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- special-collection終了 -->
+
+            <!-- beauty開始 -->
+            <div class="side beauty">
+              <p class="side-title">BEAUTY</p>
+              <div class="beauty-content-wrapper">
+                <div class="beauty-toggle-title1 beauty-toggle-title">
+                  <span class="plus1"><a href="">Make Up</a></span>
+                </div>
+                <div class="beauty-toggle-hide1 beauty-toggle-hide">
+                  <a href="">
+                    <p>AAAAA</p>
+                  </a>
+                  <a href="">
+                    <p>BBBB</p>
+                  </a>
+                  <a href="">
+                    <p>CCCCC</p>
+                  </a>
+                  <a href="">
+                    <p>DDDDD</p>
+                  </a>
+                </div>
+                <div class="beauty-toggle-title2 beauty-toggle-title">
+                  <span class="plus2"><a href="">Skin Care</a></span>
+                </div>
+                <p class="beauty-toggle-hide2 beauty-toggle-hide">
+                  <a href="#">AAAAA</a><br>
+                  <a href="#">BBBBB</a><br>
+                  <a href="#">CCCCC</a><br>
+                  <a href="#">DDDDD</a><br>
+                </p>
+                <div class="beauty-toggle-title3 beauty-toggle-title">
+                  <span class="plus3"><a href="">Fragrances</a></span>
+                  </p>
+                </div>
+                <div class="beauty-toggle-hide3 beauty-toggle-hide">
+                  <a href="">
+                    <p>AAAAA</p>
+                  </a>
+                  <a href="">
+                    <p>BBBB</p>
+                  </a>
+                  <a href="">
+                    <p>CCCCC</p>
+                  </a>
+                  <a href="">
+                    <p>DDDDD</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- beauty終了 -->
+
+
+            <div class="side-banner side">
+              バナー
+            </div>
+
+
+            <!-- filter開始 -->
+            <div class="side filter">
+              <p class="side-title">FILTER</p>
+              <div class="filter-color">
+                <p class="filter-color-title">COLOR</p>
+                <div class="filter-color-wrapper">
+                  <a href="" class="filter-color-item1">
+                    <div class=" filter-color-item"></div>
+                  </a>
+                  <a href="" class="filter-color-item2">
+                    <div class=" filter-color-item"></div>
+                  </a>
+                  <a href="" id="filter-color-item3">
+                    <div class="filter-color-item3 filter-color-item"></div>
+                  </a>
+                  <a href="" class="filter-color-item4 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item5 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item6 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item7 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item8 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item9 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item10 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item11 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item12 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item13 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item14 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item15 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item16 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item17 filter-color-item">
+                    <div></div>
+                  </a>
+                  <a href="" class="filter-color-item18 filter-color-item">
+                    <div></div>
+                  </a>
+                  <!-- <a href="" class="filter-color-item19 filter-color-item"><div></div></a>
+                  <a href="" class="filter-color-item20 filter-color-item"><div></div></a> -->
+                </div>
+              </div>
+              <div class="filter-size">
+                <p class="filter-size-title">SIZE</p>
+                <div class="filter-size-item-wrapper">
+                  <a href="">
+                    <div class="filter-size-item l">L</div>
+                  </a>
+                  <a href="">
+                    <div class="filter-size-item m">M</div>
+                  </a>
+                  <a href="">
+                    <div class="filter-size-item s">S</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- filter終了 -->
+
+            <!-- featured-collection開始 -->
+            <div class="side featured-collection">
+              <p class="side-title">FEATURED COLLECTION</p>
+              <div class="featured-collection-item">
+                <div class="featured-collection-item-left">
+                  <img src="./images/side-special.png" alt="">
+                </div>
+                <div class="featured-collection-item-right">
+                  <p class="featured-collection-item-right-title"><a href="">Facial<br>
+                      Cleanser</a>
+                  </p>
+                  <p class="featured-collection-item-right-price">$20.00</p>
+                  <p class="featured-collection-item-right-stars"><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i></p>
+                </div>
+              </div>
+              <div class="featured-collection-item">
+                <div class="featured-collection-item-left">
+                  <img src="./images/side-special.png" alt="">
+                </div>
+                <div class="featured-collection-item-right">
+                  <p class="featured-collection-item-right-title"><a href="">Base<br>
+                      Foundation
+                    </a></p>
+                  <p class="featured-collection-item-right-price"><span class="price">$12.99</span> $10.00</p>
+                  <p class="featured-collection-item-right-stars"><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i></p>
+                </div>
+              </div>
+              <div class="featured-collection-item">
+                <div class="featured-collection-item-left">
+                  <img src="./images/side-special.png" alt="">
+                </div>
+                <div class="featured-collection-item-right">
+                  <p class="featured-collection-item-right-title">
+                    <a href="">Anti-Aging<br> Cream</a>
+                  </p>
+                  <p class="featured-collection-item-right-price">$12.00</p>
+                  <p class="featured-collection-item-right-stars"><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i></p>
+                </div>
+              </div>
+
+              <p class="featured-collection-link"><a href="">VIEW ALL PRODUCTS <i class="fas fa-chevron-right"></i></a>
+              </p>
+            </div>
+            <!-- featured-collection終了 -->
+
+            <!-- 女性のバナー開始 -->
+            <div class="side-woman-banner">
+              <a href=""><img src="./images/side-banner.png" alt=""></a>
+            </div>
+            <!-- 女性のバナー終了 -->
+
+            <!-- 女性のバナー開始 -->
+            <div class="side-woman-banner">
+              <a href=""><img src="./images/side-banner.png" alt=""></a>
+            </div>
+            <!-- 女性のバナー終了 -->
+          </div>
+          <!-- side-wrapper終了 -->
+        </div>
+        <!-- side-content-wrapper終了 -->
+        <!-- 固定バナーがあるときのやつ -->
+    </section>
+
+    <!-- news開始 -->
+    <div class="news-pc news content">
+      <h2>News <span class="news-title-japanese">ショップからのお知らせ</span></h2>
+      <div class="news-wrapper">
+        <div class="news-left">
+          <p class="news-left-time">2021.02.19</p>
+          <p class="news-left-time">2021.02.19</p>
+          <p class="news-left-time">2021.02.12</p>
+          <p class="news-left-time">2021.02.10</p>
+          <p class="news-left-time">2021.02.05</p>
+        </div>
+        <div class="news-right">
+          <p class="news-right-text"><span class="news-right-text-red">aaaa</span>ああああああああああああああああああああああああああああああああ</p>
+        </div>
+      </div>
+    </div>
+    <!-- news終了 -->
+
+    <section class="guide">
+      <h2>Guide<span class="guide-japanese-title">お買い物ガイド</span></h2>
+      <div class="guide-gray-wrapper">
+        <div class="guide-wrapper">
+          <div class="guide-detail"><a href=""><span class="guide-detail-btn">詳細はこちら<i
+                  class="fas fa-chevron-right"></i></span></a>
+          </div>
+          <div class="guide-menu-wrapper">
+            <a href="">
+              <div class="guide-menu-item">
+                ご注文<br><span class="guide-menu-item-normal">について</span>
+              </div>
+            </a>
+            <a href="">
+              <div class="guide-menu-item">
+                お支払い<br><span class="guide-menu-item-normal">について</span>
+              </div>
+            </a>
+            <a href="">
+              <div class="guide-menu-item">
+                返品交換<br><span class="guide-menu-item-normal">について</span>
+              </div>
+            </a>
+            <a href="">
+              <div class="guide-menu-item">
+                ラッピング<br><span class="guide-menu-item-normal">について</span>
+              </div>
+            </a>
+            <a href="">
+              <div class="guide-menu-item">
+                <span class="guide-menu-item-normal">よくある</span><br>ご質問
+              </div>
+            </a>
+          </div>
+          <div class="guide-top">
+            <h3>当店より送信されたメールを確認する方法</h3>
+            <p class="guide-top-text">
+              お客様宛に送信された30日間分のメールを「ショップからのメール」機能にてご確認いただけます。こちらの機能をご利用されるには、事前に現在ご登録中のメールアドレスの認証手続きが必要となります。</p>
+            <p class="guide-top-text-link">
+              <a href="">
+                <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>メールアドレスの認識手続き方法
+              </a>
+            </p>
+          </div>
+          <div class="guide-six-wrapper">
+            <div class="guide-six-item shipping">
+              <h3>送料について</h3>
+              <p class="shipping-first-text">詳しくは<span class="text-decoration">出荷・配送</span>についてをご参照ください。</p>
+              <p class="shipping-second-text"><span class="text-red">3,980円（税込）以上</span>お買い上げで<span
+                  class="text-red">送料無料</span><br>
+                <span class="small">(※沖縄・離島・一部地域は除く）</span>
+              </p>
+              <p class="shipping-car-text">■宅急便<br>
+                全国一律<span class="text-red">690円</span><span class="small">(※沖縄・北海道は1,350円)</span>
+              </p>
+              <p class="shipping-mail-text">■メール便（ゆうパケット）<br>
+                全国一律<span class="text-red">260円</span><br>
+                【メール便可】が商品名に入った商品名に入った商品に限ります。必ずルールをご確認の上、ご利用ください。<br>
+                <a href=""><i class="fas fa-chevron-right"></i>詳しくはこちら</a>
+              </p>
+            </div>
+            <div class="guide-six-item payment">
+              <h3>お支払いについて</h3>
+              <p class="payment-first-text">クレジット決済・後払い決済・銀行振込・セブンイレブン(前払)・ローソン、郵便局ATM等(前払)・代引きがご利用になれます。<br>
+                詳しくは<span class="text-decoration"><a href="">お支払いについて</a></span>をご参照ください。
+              </p>
+              <p class="list-title">クレジットカード</p>
+              <p class="credit-img"><img src="./images/credit.gif" alt=""></p>
+              <p class="list-title">楽天振込</p>
+              <p class="rakuten-img">R楽天カード</p>
+              <p class="list-title">代金引換（現金決済のみ・決済手数料330円）</p>
+            </div>
+            <div class="guide-six-item delivery">
+              <h3>配送について</h3>
+              <p class="delivery-first-text">通常、ご注文商品はお客様のご注文から翌翌営業日の閉店発送となります。（銀行振込、セブンイレブン（前払）・ローソン、郵便局ATM等（前払）除く）<br>
+                ※詳しくは<span class="text-decoration">お支払いとお届け日について、お届けの目安</span>をご参照ください<br>
+                ※ご注文の混雑状況などにより、多少前後する場合がございます。
+              </p>
+              <div class="delivery-img"><img src="./images/bnr_asuraku.gif" alt=""></div>
+              <p class="delivery-second-text">
+                ※休業日・土日祝・月曜日等の休業日明けのご注文を除きます。<br>
+                ※一部あす楽対象外商品がございます。商品ページごとにご確認をお願いいたします。
+              </p>
+            </div>
+            <div class="guide-six-item layaway">
+              <h3>お取り置きについて</h3>
+              <p class="layaway-first-text">誠に恐れ入りますが<br>
+                <span class="text-red">2019年5月17日以降、お取り置きと同梱サービスが廃止</span>となりました。<br>
+                何卒ご了承の程、よろしくお願い申し上げます。
+              </p>
+              <p class="layway-second-text">お取り置きと同梱サービスについては<span class="text-decoration"><a
+                    href="">コチラをクリック</a></span></p>
+            </div>
+            <div class="guide-six-item contact">
+              <h3>お問い合わせ</h3>
+              <div class="contact-mail"><i class="far fa-envelope"></i></div>
+              <div class="contact-phone"><i class="fas fa-phone-alt"></i></div>
+              <p class="contact-text">※17時以降・休業日のメール受信につきましては、営業日に順次返信させていただきますのでご了承ください。<br>
+                ※ご注文は楽天市場のご注文フォームからのみとさせていただいております。メール・電話でのご注文は承っておりませんのでご了承ください。
+              </p>
+            </div>
+            <div class="guide-six-item calendar">
+              <h3>営業日カレンダー</h3>
+              <div class="calendar-top">
+                <p class="calendar-year-month">2021年2月</p>
+                <div class="calendar-top-right">
+                  <p class="back"><i class="fas fa-chevron-left"></i>back</p>
+                  <p class="today">today</p>
+                  <p class="next"><i class="fas fa-chevron-right"></i>next</p>
+                </div>
+              </div>
+              <div class="calendar-wrapper">
+                <div class="calendar-item-wrapper">
+                  <div class="calendar-item">日</div>
+                  <div class="calendar-item">月</div>
+                  <div class="calendar-item">火</div>
+                  <div class="calendar-item">水</div>
+                  <div class="calendar-item">木</div>
+                  <div class="calendar-item">金</div>
+                  <div class="calendar-item">土</div>
+                </div>
+                <div class="calendar-item-wrapper">
+                  <div class="calendar-item"></div>
+                  <div class="calendar-item bg-yellow">1</div>
+                  <div class="calendar-item">2</div>
+                  <div class="calendar-item">3</div>
+                  <div class="calendar-item">4</div>
+                  <div class="calendar-item">5</div>
+                  <div class="calendar-item bg-pink">6</div>
+                </div>
+                <div class="calendar-item-wrapper">
+                  <div class="calendar-item bg-pink">7</div>
+                  <div class="calendar-item bg-yellow">8</div>
+                  <div class="calendar-item">9</div>
+                  <div class="calendar-item">10</div>
+                  <div class="calendar-item bg-pink">11</div>
+                  <div class="calendar-item bg-yellow">12</div>
+                  <div class="calendar-item bg-pink">13</div>
+                </div>
+                <div class="calendar-item-wrapper">
+                  <div class="calendar-item bg-pink">14</div>
+                  <div class="calendar-item bg-yellow">15</div>
+                  <div class="calendar-item">16</div>
+                  <div class="calendar-item">17</div>
+                  <div class="calendar-item">18</div>
+                  <div class="calendar-item">19</div>
+                  <div class="calendar-item bg-pink">20</div>
+                </div>
+                <div class="calendar-item-wrapper">
+                  <div class="calendar-item bg-pink">21</div>
+                  <div class="calendar-item bg-yellow">22</div>
+                  <div class="calendar-item bg-pink">23</div>
+                  <div class="calendar-item bg-yellow">24</div>
+                  <div class="calendar-item">25</div>
+                  <div class="calendar-item">26</div>
+                  <div class="calendar-item bg-pink">27</div>
+                </div>
+                <div class="calendar-item-wrapper">
+                  <div class="calendar-item bg-pink">28</div>
+                  <div class="calendar-item"></div>
+                  <div class="calendar-item"></div>
+                  <div class="calendar-item"></div>
+                  <div class="calendar-item"></div>
+                  <div class="calendar-item"></div>
+                  <div class="calendar-item"></div>
+                </div>
+              </div>
+              <div class="calendar-bottom">
+                <p class="calendar-bottom-left">■土日祝、弊店定休日</p>
+                <p class="calendar-bottom-right">■一部業務を縮小し営業</p>
+              </div>
+            </div>
+          </div>
+          <div class="guide-footer-nav">
+            <p><a href="">会社概要</a></p>
+            <p><a href="">実店舗</a></p>
+            <p><a href="">スタッフ募集</a></p>
+            <p><a href="">特定商取引法に基づく表記</a></p>
+            <p><a href="">個人情報の取り扱い</a></p>
+            <p><a href="">お問い合わせ</a></p>
+          </div>
+        </div>
+        <!-- guide-wrapper終了 -->
+      </div>
+      <!-- guide-gray-wrapper終了 -->
+    </section>
+
+    <div class="footer-mail">
+      <div class="footer-mail-wrapper">
+        <div class="footer-mail-left"><a href=""><img src="./images/foote-melmaga.png" alt=""></a></div>
+        <div class="footer-mail-center">ストアニュースレターを購読していち早くセール情報、クーポンなどをGETする</div>
+        <div class="footer-mail-right"><a href="">購読</a></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>©︎2021 aaaaa All Right Reserved</p>
+    </footer>
+
+
+  </div>
+  <!-- overflow-hidden用のやつ終了 -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.15/swiper-bundle.min.js"
+    integrity="sha512-NahckN+grB6fSxu3vQdKiyC69swjW6+xYUjaPVWTGtRuia8zUIlw2gkgjhZmAd8lAECEHV3HdCudarnAZaWkZw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="paginathing.min.js"></script> 
+  <!--ツールチップを出すためのJS-->
+  <script src="https://unpkg.com/popper.js@1"></script>
+  <script src="https://unpkg.com/tippy.js@5"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
